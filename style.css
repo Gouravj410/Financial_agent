@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body {
+    background: #101010;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #18181c;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    padding: 38px 28px 32px 28px;
+    width: 420px;
+    max-width: 97vw;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 1.4rem;
+    background: linear-gradient(90deg,#0ff, #08f, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #222225;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input:focus {
+    background: #202c36;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 13px 0;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #09e6ba 0%, #0139ad 100%);
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 2px 10px 0 rgba(0,255,255,0.1);
+    transition: background 0.3s, transform 0.15s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #0139ad 0%, #09e6ba 100%);
+    transform: translateY(-2px) scale(1.02);
+}
+
+#finance-details {
+    margin-top: 22px;
+    min-height: 38px;
+    background: #181c24;
+    border-radius: 8px;
+    padding: 16px 10px 12px 14px;
+    color: #09e6ba;
+    font-weight: 500;
+    font-size: 1.02rem;
+    text-align: left;
+    box-shadow: 0 1px 4px 0 rgba(0,255,255,0.05);
+    display: none;
+}
+
+#chat-box {
+    margin-top: 20px;
+    background: #181c24;
+    border-radius: 10px;
+    padding: 12px;
+    height: 250px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 0.95rem;
+    box-shadow: inset 0 1px 6px rgba(0,0,0,0.3);
+}
+
+#chat-box p {
+    margin: 6px 0;
+}
+
+#chat-box p strong {
+    color: #09e6ba;
+}
+
+.loading {
+    color: #ccc;
+    font-style: italic;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 16px 5px 16px 5px;
+        width: 97vw;
+    }
+    h1 {
+        font-size: 1.22rem;
+    }
+}python agent.py
