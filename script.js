@@ -36,9 +36,9 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    loadingMsg.innerHTML = `<strong>Agent:</strong> ${data.answer || "⚠️ No response"}`;
+    loadingMsg.innerHTML = `<strong>Agent:</strong> ${data.answer || "No response"}`;
   } catch (err) {
-    loadingMsg.innerHTML = `<strong>Agent:</strong> ❌ Error connecting to server.`;
+    loadingMsg.innerHTML = `<strong>Agent:</strong>Error connecting to server.`;
   }
 }
 
@@ -48,3 +48,4 @@ input.addEventListener("keypress", function (e) {
     sendMessage();
   }
 });
+
