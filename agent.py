@@ -6,7 +6,7 @@ from agno.models.groq import Groq
 import uvicorn
 import os
 
-# 👉 Put your GROQ API key here
+# Put your GROQ API key here
 os.environ["GROQ_API_KEY"] = "Enter_Your_GROQ_API_KEY"
 
 app = FastAPI()
@@ -33,14 +33,14 @@ class Query(BaseModel):
 
 @app.get("/")
 def root():
-    return {"message": "✅ AGNO Financial Agent is running with Groq LLaMA-3. Use POST /ask to chat."}
+    return {"message": " AGNO Financial Agent is running with Groq LLaMA-3. Use POST /ask to chat."}
 
 @app.post("/ask")
 def ask(query: Query):
     try:
         result = agent.run(query.question)
 
-        # ✅ Only return the plain content instead of the full RunResponse object
+        #  Only return the plain content instead of the full RunResponse object
         if hasattr(result, "content"):
             return {"answer": result.content}
         else:
@@ -52,3 +52,4 @@ def ask(query: Query):
 
 if __name__ == "__main__":
     uvicorn.run("agent:app", host="127.0.0.1", port=8000, reload=True)
+
